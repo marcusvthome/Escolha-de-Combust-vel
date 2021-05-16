@@ -30,8 +30,9 @@ namespace Escolha_de_Combustível
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.txtEtanol = new System.Windows.Forms.TextBox();
-            this.txtGasolina = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.txtValorEtanol = new System.Windows.Forms.TextBox();
+            this.txtValorGasolina = new System.Windows.Forms.TextBox();
             this.txtKmEtanol = new System.Windows.Forms.TextBox();
             this.txtKmGasolina = new System.Windows.Forms.TextBox();
             this.btnCalcular = new System.Windows.Forms.Button();
@@ -42,43 +43,45 @@ namespace Escolha_de_Combustível
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtEtanol
+            // txtValorEtanol
             // 
-            this.txtEtanol.Location = new System.Drawing.Point(74, 45);
-            this.txtEtanol.Name = "txtEtanol";
-            this.txtEtanol.Size = new System.Drawing.Size(120, 23);
-            this.txtEtanol.TabIndex = 0;
+            this.txtValorEtanol.Location = new System.Drawing.Point(63, 77);
+            this.txtValorEtanol.Name = "txtValorEtanol";
+            this.txtValorEtanol.Size = new System.Drawing.Size(120, 23);
+            this.txtValorEtanol.TabIndex = 0;
             // 
-            // txtGasolina
+            // txtValorGasolina
             // 
-            this.txtGasolina.Location = new System.Drawing.Point(74, 99);
-            this.txtGasolina.Name = "txtGasolina";
-            this.txtGasolina.Size = new System.Drawing.Size(120, 23);
-            this.txtGasolina.TabIndex = 1;
+            this.txtValorGasolina.Location = new System.Drawing.Point(63, 132);
+            this.txtValorGasolina.Name = "txtValorGasolina";
+            this.txtValorGasolina.Size = new System.Drawing.Size(120, 23);
+            this.txtValorGasolina.TabIndex = 1;
             // 
             // txtKmEtanol
             // 
-            this.txtKmEtanol.Location = new System.Drawing.Point(74, 175);
+            this.txtKmEtanol.Location = new System.Drawing.Point(63, 213);
             this.txtKmEtanol.Name = "txtKmEtanol";
             this.txtKmEtanol.Size = new System.Drawing.Size(120, 23);
             this.txtKmEtanol.TabIndex = 2;
             // 
             // txtKmGasolina
             // 
-            this.txtKmGasolina.Location = new System.Drawing.Point(74, 237);
+            this.txtKmGasolina.Location = new System.Drawing.Point(62, 269);
             this.txtKmGasolina.Name = "txtKmGasolina";
             this.txtKmGasolina.Size = new System.Drawing.Size(120, 23);
             this.txtKmGasolina.TabIndex = 3;
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(74, 288);
+            this.btnCalcular.Location = new System.Drawing.Point(30, 321);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(120, 88);
+            this.btnCalcular.Size = new System.Drawing.Size(200, 45);
             this.btnCalcular.TabIndex = 4;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
@@ -87,7 +90,7 @@ namespace Escolha_de_Combustível
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(95, 27);
+            this.label1.Location = new System.Drawing.Point(84, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 15);
             this.label1.TabIndex = 5;
@@ -96,7 +99,7 @@ namespace Escolha_de_Combustível
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(91, 81);
+            this.label2.Location = new System.Drawing.Point(84, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 15);
             this.label2.TabIndex = 6;
@@ -105,7 +108,7 @@ namespace Escolha_de_Combustível
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(62, 157);
+            this.label4.Location = new System.Drawing.Point(51, 192);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(151, 15);
             this.label4.TabIndex = 7;
@@ -114,7 +117,7 @@ namespace Escolha_de_Combustível
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 219);
+            this.label3.Location = new System.Drawing.Point(39, 247);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(163, 15);
             this.label3.TabIndex = 8;
@@ -122,6 +125,7 @@ namespace Escolha_de_Combustível
             // 
             // errorProvider1
             // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
             // 
             // menuStrip1
@@ -141,6 +145,24 @@ namespace Escolha_de_Combustível
             this.toolStripMenuItem1.Size = new System.Drawing.Size(38, 20);
             this.toolStripMenuItem1.Text = "Sair";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(30, 39);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 127);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Combustivel";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(30, 172);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 142);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Consumo";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -153,16 +175,18 @@ namespace Escolha_de_Combustível
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.txtKmGasolina);
             this.Controls.Add(this.txtKmEtanol);
-            this.Controls.Add(this.txtGasolina);
-            this.Controls.Add(this.txtEtanol);
+            this.Controls.Add(this.txtValorGasolina);
+            this.Controls.Add(this.txtValorEtanol);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Escolha de Combustível";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -173,8 +197,8 @@ namespace Escolha_de_Combustível
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtEtanol;
-        private System.Windows.Forms.TextBox txtGasolina;
+        private System.Windows.Forms.TextBox txtValorEtanol;
+        private System.Windows.Forms.TextBox txtValorGasolina;
         private System.Windows.Forms.TextBox txtKmEtanol;
         private System.Windows.Forms.TextBox txtKmGasolina;
         private System.Windows.Forms.Button btnCalcular;
@@ -185,6 +209,8 @@ namespace Escolha_de_Combustível
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 
